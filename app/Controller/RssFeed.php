@@ -54,8 +54,8 @@ namespace App\Controller {
                     ->description("Latest news from $name")
                     ->url($host)
                     ->language('en-US')
-                    ->pubDate(Carbon::parse($top->updated_at)->timestamp)
-                    ->lastBuildDate(Carbon::parse($top->updated_at)->timestamp)
+                    ->pubDate(Carbon::parse($top->updated_at ?: time())->timestamp)
+                    ->lastBuildDate(Carbon::parse($top->updated_at ?: time())->timestamp)
                     ->ttl(86400)
                     ->appendTo($feed);
 
