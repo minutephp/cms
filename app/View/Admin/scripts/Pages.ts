@@ -45,3 +45,4 @@ module Admin {
     angular.module('pageListApp', ['MinuteFramework', 'AdminApp', 'gettext'])
         .controller('pageListController', ['$scope', '$minute', '$ui', '$timeout', 'gettext', 'gettextCatalog', PageListController]);
 }
+

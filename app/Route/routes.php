@@ -74,6 +74,9 @@ $router->post('/_proofread/{hash}', null, false, 'm_page_proofs as proofs')
 $router->get('/static/themes/{theme_name}/assets/{asset_name}', 'Theme/LoadAsset', false)
        ->setDefault('_noView', true);
 
+$router->get('/admin/hosting', null, 'admin');
+$router->post('/admin/hosting', 'Admin/Hosting/Hosting@upload', 'admin');
+
 $router->get('/admin/cms-config', null, 'admin', 'm_configs[type] as configs')
        ->setReadPermission('configs', 'admin')->setDefault('type', 'cms');
 $router->post('/admin/cms-config', null, 'admin', 'm_configs as configs')

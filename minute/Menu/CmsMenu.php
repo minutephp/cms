@@ -15,6 +15,7 @@ namespace Minute\Menu {
                 'pages' => ['title' => 'Pages', 'href' => '/admin/pages', 'icon' => 'fa-code', 'priority' => 1, 'parent' => 'cms'],
                 'themes' => ['title' => 'Themes', 'href' => '/admin/themes', 'icon' => 'fa-paint-brush', 'priority' => 2, 'parent' => 'cms'],
                 'special-pages' => ['title' => 'Special pages', 'href' => '/admin/cms-config', 'icon' => 'fa-star', 'priority' => 99, 'parent' => 'cms'],
+                'hosting' => ['title' => 'File Hosting', 'href' => '/admin/hosting', 'icon' => 'fa-cloud', 'priority' => 99, 'parent' => 'cms'],
                 //'link-checker' => ['title' => 'Check links', 'href' => '/admin/check-links', 'icon' => 'fa-check', 'priority' => 60, 'parent' => 'expert']
             ];
 
