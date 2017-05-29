@@ -16,7 +16,7 @@ var App;
             var selector = '#navbar a[href="' + location.pathname + '"]';
             tooltips.tooltip();
             $(selector).parent('li').addClass('active');
-            var _loop_1 = function(event_1) {
+            var _loop_1 = function (event_1) {
                 var redir = $('div[data-' + event_1 + '-redirect]').data(event_1 + '-redirect');
                 if (redir) {
                     $scope.$on('session_user_' + event_1, function () { return top.location.href = redir; });
@@ -31,7 +31,7 @@ var App;
             var _this = this;
             var iframe = $('#ytframe');
             var popup = $('#ytPopupVideo').on('hidden.bs.modal', function () { return iframe.attr('src', 'about:blank'); });
-            var _loop_2 = function(type) {
+            var _loop_2 = function (type) {
                 selector = 'a[href$="#/' + type + '"],[data-link-type="' + type + '"]';
                 $(selector).each(function (i, a) { return $(a).click(function () {
                     _this.$scope.session[type]();
